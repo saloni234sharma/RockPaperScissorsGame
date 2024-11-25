@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  cursor: pointer;
+}
+body {
+  background: #84b75d;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.score-box {
+  width: 800px;
+  border: 2px solid white;
+  padding: 12px 17px;
+  border-radius: 16px;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+.options {
+  font-weight: bold;
+  font-size: 38px;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.scores {
+  padding: 6px 10px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.scr {
+  flex: 1;
+  border-radius: 10px;
+  min-width: 130px;
+  height: 130px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: white;
+  color: gray;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+span {
+  color: black;
+  font-size: 58px;
+  font-weight: bolder;
+}
+.pictures {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.img-triangle {
+  height: 430px;
+  width: 400px;
+  margin-top: 30px;
+}
+.turn {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 10%;
+  left: 13%;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.user {
+  opacity: 0;
+  color: white;
+}
+.pc {
+  opacity: 0;
+  position: absolute;
+  left: 85%;
+  color: white;
+}
+
+.icons {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.icons-computer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.pic-1,
+.pic-2,
+.pic-3 {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 135px;
+  width: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pic-1 {
+  border: 16px solid rgba(2, 104, 207, 0.89);
+  top: 22%;
+  left: 35%;
+  transform: translateX(-50%);
+}
+
+.pic-2 {
+  border: 16px solid orange;
+  top: 65%;
+  left: 42%;
+}
+
+.pic-3 {
+  border: 16px solid rgb(186, 17, 186);
+  top: 22%;
+  left: 57%;
+}
+
+.pic-1 img,
+.pic-2 img {
+  height: 56%;
+  width: auto;
+}
+
+.pic-3 img {
+  height: 68%;
+  width: auto;
+  object-fit: contain;
+}
+
+.rules-list {
+  list-style-type: square;
+}
+.rules-list li::marker {
+  color: yellow;
+  font-size: 25px;
+  list-style-position: inside;
+  padding: 0;
+}
+.close-btn-div {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  font-size: 20px;
+}
+
+.close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  font-size: 10px;
+  border: 5px white solid;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.game-rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  position: absolute;
+  top: 45%;
+  left: 74%;
+  height: 360px;
+  width: 300px;
+  color: white;
+  padding: 35px;
+  background-color: rgba(1, 45, 41, 0.861);
+  border: 8px white solid;
+  border-radius: 15px;
+  display: none;
+}
+.game-rules > h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+.rules-btn {
+  padding: 10px;
+  width: 120px;
+  background-color: transparent;
+  border: 2px white solid;
+  border-radius: 10px;
+  font-weight: 500;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.rules-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rules-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rules-list li::before {
+  content: "■";
+  color: yellow;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.button {
+  width: 125%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2rem;
+}
+.winning-page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: 0;
+  flex-direction: column;
+  display: none;
+}
+.you-win {
+  font-size: 2.5rem;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.against-pc {
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.playAgain-btn {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px white solid;
+  text-align: center;
+  color: #1e1e1eb8;
+  font-size: 15px;
+  font-weight: 550;
+  background-color: #fff;
+  width: 180px;
+  height: 45px;
+  letter-spacing: 2px;
+}
+.loosing-page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: 0;
+  flex-direction: column;
+  display: none;
+}
+.tieUp-page {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: 0;
+  flex-direction: column;
+  display: none;
+}
+.show {
+  top: 25%;
+  left: 18%; 
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 135px;
+  width: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+.right-show {
+  left: 80%;
+  top: 24%;
+}
+
+@keyframes userWinAnimation {
+  0% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+
+@keyframes computerWinAnimation {
+  0% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+.user-win {
+  animation: userWinAnimation 5s ease-out;
+}
+
+.computer-win {
+  animation: computerWinAnimation 5s ease-out;
+}
+
+.winning-page {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.winning-page.show {
+  display: flex;
+}

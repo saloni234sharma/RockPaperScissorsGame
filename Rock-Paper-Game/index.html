@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors-Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="score-box">
+        <div class="options">
+          <p>ROCK</p>
+          <p>PAPER</p>
+          <p>SCISSORS</p>
+        </div>
+        <div class="scores">
+          <div class="scr">
+            <p>COMPUTER <br />SCORE</p>
+            <span id="score2">0</span>
+          </div>
+          <div class="scr">
+            <p>YOUR <br />SCORE</p>
+            <span id="score">0</span>
+          </div>
+        </div>
+      </div>
+      <div class="pictures">
+        <div class="turn">
+          <p class="user">YOU PICKED</p>
+          <p class="pc">PC PICKED</p>
+        </div>
+        <div class="game-img">
+          <img class="img-triangle" src="triangle.png" alt="" />
+        </div>
+        <div class="icons">
+          <div class="pic-1 con"><img src="fist-rock.png" alt="" /></div>
+          <div class="pic-2 con"><img src="hand-icn.svg" alt="" /></div>
+          <div class="pic-3 con"><img src="sciss.svg" alt="" /></div>
+        </div>
+        <div class="icons-computer">
+          <div class="pic-1 computer"><img src="fist-rock.png" alt="" /></div>
+          <div class="pic-2 computer"><img src="hand-icn.svg" alt="" /></div>
+          <div class="pic-3 computer"><img src="sciss.svg" alt="" /></div>
+        </div>
+        
+      </div>
+      <div class="game-rules">
+        <div class="close-btn-div">
+          <button class="close-btn"><img src="close-btn.png" alt="" /></button>
+        </div>
+        <h2>Game Rules</h2>
+        <ul class="rules-list">
+          <li style="margin-top: 10px">
+            Rock beats scissors, scissor beat paper and paper beats rock
+          </li>
+          <li style="margin-top: 10px">
+            Agreed ahead of time weather you'll count off "rock, paper, scissor,
+            shoot" or just "rock, paper, scissor".
+          </li>
+          <li style="margin-top: 10px">
+            Use rock, paper, scissors to settle minor decisions, or simply play
+            to pass the time
+          </li>
+          <li style="margin-top: 10px">
+            if both players lay down the same hand, each player lays down
+            another hand.
+          </li>
+        </ul>
+      </div>
+      <div class="button">
+        <button class="rules-btn">RULES</button>
+      </div>
+      <div class="winning-page">
+        <h1 class="you-win">YOU WIN</h1>
+        <h2 class="against-pc">AGAINST PC</h2>
+        <button class="playAgain-btn">PLAY AGAIN</button>
+      </div>
+      <div class="loosing-page">
+        <h1 class="you-win">YOU LOST</h1>
+        <h2 class="against-pc">AGAINST PC</h2>
+        <button class="playAgain-btn">PLAY AGAIN</button>
+      </div>
+      <div class="tieUp-page">
+        <h1 class="you-win">TIE UP</h1>
+        
+        <button class="playAgain-btn">PLAY AGAIN</button>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
